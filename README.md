@@ -27,5 +27,14 @@
      In body tab, form-data, in KEY goes "file" and in value have to load the csv file.
      This process load the csv file into the database in a trip table. Also, group trips for hour and minute and for distance between origins and destionations, and take as similar trip who has at 100km at least. This is the process that uses most of the time in this method.
      
-     This solution is scalable, but with more time, it is posible to improve performance, and use threads to process in parallel or improve the performance of the algorithm to detect points nearby. I probe until 500 thousand of registers and the time to process that file was about six hours. With more memory the process can load more registers and process them. Also, I understand that I have to use the same dataset and repiclated multiples times to obtain 500 thousand of registers I had a lot of trips similars that add a lot of processing and not represents the reality of the distribution of the trips.
+     This solution is scalable, but with more time, it is posible to improve performance, and use threads to process in parallel or improve the performance of the algorithm to detect points nearby. I probe until 100 thousand of registers and the time to process that file was about two hours. With more memory the process can load more registers and process them. Also, I understand that I have to use the same dataset and repiclated multiples times to obtain 500 thousand of registers I had a lot of trips similars that add a lot of processing and not represents the reality of the distribution of the trips.
+     
+     
+ - api_status hay one endpoint:
+   * csv_file_status in  /api/csv_file_status - METHOD: GET  : this endpoint tells the status of the data ingestion with a percentage between 0 and 100.
+   
+   
+  
+ In each api, exists a readme to help to config and run it.
+     
      

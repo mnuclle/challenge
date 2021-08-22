@@ -248,5 +248,5 @@ class TripList(Resource):
         return len(trips) / 7
 
 
-api.add_resource(TripList, '/api/tripList', endpoint='weekly_average')
+api.add_resource(TripList, '/api/weekly_average', endpoint='weekly_average')
 api.add_resource(Trips, '/api/trips_save', endpoint='save_csv')

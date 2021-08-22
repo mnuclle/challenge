@@ -31,7 +31,7 @@
      
      
  - api_status hay one endpoint:
-   * csv_file_status in  /api/csv_file_status - METHOD: GET  : this endpoint tells the status of the data ingestion with a percentage between 0 and 100.
+   * csv_file_status in  /api/csv_file_status - METHOD: GET  : this endpoint this endpoint is callable from postman with only the url and tells the status of the data ingestion with a percentage between 0 and 100.
    
    
   

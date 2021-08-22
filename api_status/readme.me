@@ -1,0 +1,36 @@
+#API_STATUS
+  Api used to know the status of the data ingest 
+  
+First you have to go to the file default.py in /app/config to configure the database access. I give an example:
+USER_DB = 'postgres'
+PASS_DB = 'root'
+URL_DB = 'localhost'
+NAME_DB = 'challenge'
+In this case you have to install postgresql in your pc and set this variables.
+
+In cmd, go to the folder of this api, and previously install virtualenv 
+  pip install virtualenv
+
+Then create the env with :
+  virtualenv env
+  
+Activate the enviroment:
+  .\env\Scripts\activate
+  
+Then execute to install the libs necesaries:
+  pip install -r requirements.txt
+  
+ Configure the entrypoint to the app and the default.py as setting module variable
+  set FLASK_APP=entrypoint:app
+  set APP_SETTINGS_MODULE=config.default
+ 
+ Then to start the database migration, and create the tables authomatically:
+ flask db init
+ flask db migrate 
+ flask db upgrade
+ 
+ Then with:
+ 
+ flask run --port 5001
+ 
+ you have the api running in port 5001, and the api can work with the other api that work in port 5000

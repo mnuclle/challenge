@@ -25,7 +25,7 @@ api = Api(challenge)
 
 class Trips(Resource):
     # parameter to define the distance between trips in order to consider them similar. Represents kilometers(km)
-    _PARAM_SIMILARITY = 1000
+    _PARAM_SIMILARITY = 10
 
     @classmethod
     def set_up(cls):

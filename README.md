@@ -37,4 +37,5 @@
   
  In each api, exists a readme to help to config and run it.
      
-     
+ 
+ This project use POSTGRESQL as database, so you have to configure the variables to connect the api to the database.

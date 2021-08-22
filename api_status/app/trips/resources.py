@@ -13,7 +13,14 @@ api = Api(challenge)
 
 
 class CsvFileResource(Resource):
-    # Define percentaje of charge por the file.
+
+    '''
+    After many processed files, I get a percentage of the time that consumes each process:
+       the insert of trips
+       the process of similarities and insert of similar trips
+    and this percentages are used to calculate the percentage/status of the file upload
+    '''
+
     _LIST_PERCENTAGE = 0.3
     _SIMILAR_PERCENTAGE = 0.7
 
@@ -54,5 +61,4 @@ class CsvFileResource(Resource):
         return result
 
 
-
-api.add_resource(CsvFileResource, '/api/csvFileStatus', endpoint='csv_file_status')
+api.add_resource(CsvFileResource, '/api/csv_file_status', endpoint='csv_file_status')
